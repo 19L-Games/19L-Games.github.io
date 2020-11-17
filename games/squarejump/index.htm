@@ -8,9 +8,43 @@
     <title>Square Jump</title>
     <link rel="shortcut icon" href="/img/icon.png">
     </link>
+		<style>
+	/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #00ffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #111111;
+  color: #00ffff;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #ff0000;
+  color: white;
+}
+</style>
 </head>
 
 <body onload="setup()">
+<div class="topnav">
+  <a class="active" href="/index.htm">Home</a>
+  <a href="/games/squarejump/index.htm">Games</a>
+  <a href="/about.htm">About</a>
+</div>
     <canvas id="canvas" width="480" height="360" style="border:1px solid rgb(0,0,0)"></canvas>
     <img id="blanklevel" src="img/blanklevel.svg" style="display:none"></img>
     <img id="level1" src="img/level1.svg" style="display:none"></img>
