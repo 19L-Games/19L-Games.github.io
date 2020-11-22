@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function rd() {
+window.location.replace("http://www.w3schools.com");
+}
+</script>
+</head>
+<body onload="rd()">
+<p>Redirecting...</p>
+</body>
+</html>
