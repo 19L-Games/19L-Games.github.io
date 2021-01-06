@@ -8,21 +8,25 @@ const variable = document.getElementById("var");
 
 var question = {};
 var answer = "";
-
+var time = 4;
 var correct = incorrect = 0;
+var loopInterval = window.setInterval(loop, 1000 / 30);
+var timerInterval = window.setInterval(countdown, 1000);
 
 function generate() {
     var q1 = Math.floor(12 * Math.random());
     var q2 = Math.floor(12 * Math.random())
     question.q = q1 + "*" + q2;
     question.answer = q1 * q2;
+    time = 4;
 }
 
 window.onload = () => {
 
     window.addEventListener("keydown", key);
+    window.addEventListener("click", onclick);
     generate();
-    window.setInterval(loop, 1000 / 30);
+
 }
 
 function check() {
@@ -87,4 +91,88 @@ function loop() {
     c.fillText(question.q, 100, 50, 260);
     c.font = "50px arial";
     c.fillText(answer, 95, 100, 260);
+    c.fillText(time, 10, 40);
+    if (incorrect == 3) {
+        window.clearInterval(loopInterval);
+        c.fillStyle = "#ffffff";
+        c.fillRect(0, 0, 480, 360);
+        c.fillStyle = "#ff0000";
+        c.fillText("Game Over!", 100, 100);
+        c.fillText("Your Score: " + correct, 100, 150);
+    }
+    if (correct == 10) {
+        window.clearInterval(loopInterval);
+        c.fillStyle = "#ffffff";
+        c.fillRect(0, 0, 480, 360);
+        c.fillStyle = "#00ff00";
+        c.fillText("You win!", 120, 100);
+
+    }
+}
+
+function countdown() {
+    time -= 1;
+    if (time == 0) {
+        incorrect += 1;
+        generate();
+        time = 4;
+    }
+}
+
+function onclick(e) {
+    if (e.pageX >= 167 && e.pageX < 223) {
+        if (e.pageY >= 290 && e.pageY < 347) {
+            answer += "1";
+        }
+    }
+    if (e.pageX >= 225 && e.pageX < 282) {
+        if (e.pageY >= 290 && e.pageY < 347) {
+            answer += "2";
+        }
+    }
+    if (e.pageX >= 286 && e.pageX < 344) {
+        if (e.pageY >= 290 && e.pageY < 347) {
+            answer += "3";
+        }
+    }
+    if (e.pageX >= 167 && e.pageX < 223) {
+        if (e.pageY >= 352 && e.pageY < 407) {
+            answer += "4";
+        }
+    }
+    if (e.pageX >= 225 && e.pageX < 282) {
+        if (e.pageY >= 352 && e.pageY < 407) {
+            answer += "5";
+        }
+    }
+    if (e.pageX >= 286 && e.pageX < 344) {
+        if (e.pageY >= 352 && e.pageY < 407) {
+            answer += "6";
+        }
+    }
+    if (e.pageX >= 167 && e.pageX < 223) {
+        if (e.pageY >= 411 && e.pageY < 469) {
+            answer += "7";
+        }
+    }
+    if (e.pageX >= 225 && e.pageX < 282) {
+        if (e.pageY >= 411 && e.pageY < 469) {
+            answer += "8";
+        }
+    }
+    if (e.pageX >= 286 && e.pageX < 344) {
+        if (e.pageY >= 411 && e.pageY < 469) {
+            answer += "9";
+        }
+    }
+    if (e.pageX >= 167 && e.pageX < 223) {
+        if (e.pageY >= 471 && e.pageY < 529) {
+            answer += "0";
+        }
+    }
+    if (e.pageX >= 225 && e.pageX < 344) {
+        if (e.pageY >= 471 && e.pageY < 529) {
+            check();
+        }
+    }
 }
