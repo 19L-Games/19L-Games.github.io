@@ -121,57 +121,57 @@ function countdown() {
 
 function onclick(e) {
     if (e.pageX >= 167 && e.pageX < 223) {
-        if (e.pageY >= 290 && e.pageY < 347) {
+        if (e.pageY >= 311 && e.pageY < 368) {
             answer += "1";
         }
     }
     if (e.pageX >= 225 && e.pageX < 282) {
-        if (e.pageY >= 290 && e.pageY < 347) {
+        if (e.pageY >= 311 && e.pageY < 368) {
             answer += "2";
         }
     }
     if (e.pageX >= 286 && e.pageX < 344) {
-        if (e.pageY >= 290 && e.pageY < 347) {
+        if (e.pageY >= 311 && e.pageY < 368) {
             answer += "3";
         }
     }
     if (e.pageX >= 167 && e.pageX < 223) {
-        if (e.pageY >= 352 && e.pageY < 407) {
+        if (e.pageY >= 373 && e.pageY < 428) {
             answer += "4";
         }
     }
     if (e.pageX >= 225 && e.pageX < 282) {
-        if (e.pageY >= 352 && e.pageY < 407) {
+        if (e.pageY >= 373 && e.pageY < 428) {
             answer += "5";
         }
     }
     if (e.pageX >= 286 && e.pageX < 344) {
-        if (e.pageY >= 352 && e.pageY < 407) {
+        if (e.pageY >= 373 && e.pageY < 428) {
             answer += "6";
         }
     }
     if (e.pageX >= 167 && e.pageX < 223) {
-        if (e.pageY >= 411 && e.pageY < 469) {
+        if (e.pageY >= 432 && e.pageY < 490) {
             answer += "7";
         }
     }
     if (e.pageX >= 225 && e.pageX < 282) {
-        if (e.pageY >= 411 && e.pageY < 469) {
+        if (e.pageY >= 432 && e.pageY < 490) {
             answer += "8";
         }
     }
     if (e.pageX >= 286 && e.pageX < 344) {
-        if (e.pageY >= 411 && e.pageY < 469) {
+        if (e.pageY >= 432 && e.pageY < 490) {
             answer += "9";
         }
     }
     if (e.pageX >= 167 && e.pageX < 223) {
-        if (e.pageY >= 471 && e.pageY < 529) {
+        if (e.pageY >= 492 && e.pageY < 550) {
             answer += "0";
         }
     }
     if (e.pageX >= 225 && e.pageX < 344) {
-        if (e.pageY >= 471 && e.pageY < 529) {
+        if (e.pageY >= 492 && e.pageY < 550) {
             check();
         }
     }
