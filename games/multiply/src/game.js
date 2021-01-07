@@ -94,7 +94,7 @@ function loop() {
     c.fillText(time, 10, 40);
     if (incorrect == 3) {
         window.clearInterval(loopInterval);
-        c.fillStyle = "#ffffff";
+        c.fillStyle = "#606060";
         c.fillRect(0, 0, 480, 360);
         c.fillStyle = "#ff0000";
         c.fillText("Game Over!", 100, 100);
@@ -102,7 +102,7 @@ function loop() {
     }
     if (correct == 10) {
         window.clearInterval(loopInterval);
-        c.fillStyle = "#ffffff";
+        c.fillStyle = "606060";
         c.fillRect(0, 0, 480, 360);
         c.fillStyle = "#00ff00";
         c.fillText("You win!", 120, 100);
@@ -121,57 +121,57 @@ function countdown() {
 
 function onclick(e) {
     if (e.pageX >= 167 && e.pageX < 223) {
-        if (e.pageY >= 311 && e.pageY < 368) {
+        if (e.pageY >= 290 && e.pageY < 347) {
             answer += "1";
         }
     }
     if (e.pageX >= 225 && e.pageX < 282) {
-        if (e.pageY >= 311 && e.pageY < 368) {
+        if (e.pageY >= 290 && e.pageY < 347) {
             answer += "2";
         }
     }
     if (e.pageX >= 286 && e.pageX < 344) {
-        if (e.pageY >= 311 && e.pageY < 368) {
+        if (e.pageY >= 290 && e.pageY < 347) {
             answer += "3";
         }
     }
     if (e.pageX >= 167 && e.pageX < 223) {
-        if (e.pageY >= 373 && e.pageY < 428) {
+        if (e.pageY >= 352 && e.pageY < 407) {
             answer += "4";
         }
     }
     if (e.pageX >= 225 && e.pageX < 282) {
-        if (e.pageY >= 373 && e.pageY < 428) {
+        if (e.pageY >= 352 && e.pageY < 407) {
             answer += "5";
         }
     }
     if (e.pageX >= 286 && e.pageX < 344) {
-        if (e.pageY >= 373 && e.pageY < 428) {
+        if (e.pageY >= 352 && e.pageY < 407) {
             answer += "6";
         }
     }
     if (e.pageX >= 167 && e.pageX < 223) {
-        if (e.pageY >= 432 && e.pageY < 490) {
+        if (e.pageY >= 411 && e.pageY < 469) {
             answer += "7";
         }
     }
     if (e.pageX >= 225 && e.pageX < 282) {
-        if (e.pageY >= 432 && e.pageY < 490) {
+        if (e.pageY >= 411 && e.pageY < 469) {
             answer += "8";
         }
     }
     if (e.pageX >= 286 && e.pageX < 344) {
-        if (e.pageY >= 432 && e.pageY < 490) {
+        if (e.pageY >= 411 && e.pageY < 469) {
             answer += "9";
         }
     }
     if (e.pageX >= 167 && e.pageX < 223) {
-        if (e.pageY >= 492 && e.pageY < 550) {
+        if (e.pageY >= 471 && e.pageY < 529) {
             answer += "0";
         }
     }
     if (e.pageX >= 225 && e.pageX < 344) {
-        if (e.pageY >= 492 && e.pageY < 550) {
+        if (e.pageY >= 471 && e.pageY < 529) {
             check();
         }
     }
