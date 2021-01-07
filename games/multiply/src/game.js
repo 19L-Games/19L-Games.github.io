@@ -73,7 +73,7 @@ function key(e) {
     if (e.key == "0") {
         answer += "0";
     }
-    if (e.code == "Enter") {
+    if (e.key == "Enter") {
         check();
     }
 }
@@ -102,7 +102,7 @@ function loop() {
     }
     if (correct == 10) {
         window.clearInterval(loopInterval);
-        c.fillStyle = "606060";
+        c.fillStyle = "#606060";
         c.fillRect(0, 0, 480, 360);
         c.fillStyle = "#00ff00";
         c.fillText("You win!", 120, 100);
